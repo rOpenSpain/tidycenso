@@ -2,7 +2,7 @@
 
 `tidycenso` is an R library for accesing the 2021 spanish census.
 
-It's only function is `get_censo` and admits 4 parameter:
+It's only function `get_censo` admits 4 parameters:
 
 1.  tabla: A string of length 1 with the table name to query data from
 2.  variables: A string with variable names of the queried table. If more than one, must be provided using c() (max. 4)
