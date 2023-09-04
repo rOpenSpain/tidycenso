@@ -10,6 +10,9 @@
 #' @return A data.frame with the queried data
 #' @export
 #'
+#' @examples
+#' df <- get_censo("hog", c("ID_SUP_VIV", "ID_RESIDENCIA_N1"), "SHOGARES")
+#'
 #' @importFrom httr content
 #' @importFrom httr POST
 #' @importFrom httr content_type
