@@ -4,16 +4,16 @@
 \alias{get_censo}
 \title{Get data from the 2021 spanish census}
 \usage{
-get_censo(tabla, variables, metricas, idioma = "ES")
+get_censo(table, variables, metrics, language = "ES")
 }
 \arguments{
-\item{tabla}{A string of length 1 with the table name to query data from.}
+\item{table}{A string of length 1 with the table name to query data from.}
 
 \item{variables}{A string with variable names of the queried table. If more than one, must be provided using c() (max. 4)}
 
-\item{metricas}{A string with the units of measurement of the queried data. If more than one, must be provided concatenated using `c()`}
+\item{metrics}{A string with the units of measurement of the queried data. If more than one, must be provided concatenated using `c()`}
 
-\item{idioma}{The language used in the body request (the only valid values are 'EN' or 'ES')}
+\item{language}{The language used in the body request (the only valid values are 'EN' or 'ES')}
 }
 \value{
 A data.frame with the queried data
