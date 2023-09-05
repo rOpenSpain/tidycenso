@@ -27,7 +27,7 @@ devtools::install_github("hmeleiro/tidycenso")
 2.  `variables`: A string with variable names of the queried table. If
     more than one, must be provided using c() (max. 4)
 3.  `metrics`: A string with the units of measurement of the queried
-    data. If more than one, must be provided concatenated using ‘c()’
+    data. If more than one, must be provided concatenated using `c()`
 4.  `language`: The language used in the request body (the only valid
     values are ‘EN’ or ‘ES’)
 
@@ -43,10 +43,10 @@ head(df)
 #>   SHOGARES        ID_RESIDENCIA_N1  ID_SUP_VIV
 #> 1    25464               Andalucía Hasta 30 m2
 #> 2     2586                  Aragón Hasta 30 m2
-#> 3     3252 Asturias, Principado de Hasta 30 m2
-#> 4     7686          Balears, Illes Hasta 30 m2
-#> 5    11766                Canarias Hasta 30 m2
-#> 6     1008               Cantabria Hasta 30 m2
+#> 3     3255 Asturias, Principado de Hasta 30 m2
+#> 4     7683          Balears, Illes Hasta 30 m2
+#> 5    11763                Canarias Hasta 30 m2
+#> 6     1005               Cantabria Hasta 30 m2
 
 tidycenso::tables
 #>   id_tabla                                 descripcion_tabla_es
