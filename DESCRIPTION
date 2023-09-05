@@ -4,7 +4,7 @@ Title: Download Data From 2021 Spanish Census
 Version: 0.1.0
 Author: Héctor Meleiro
 Maintainer: Héctor Meleiro <hmeleiros@gmail.com>
-Description: Retrieves data from the 2021 spanish census through the API of the National Institute of Statistics. For more info on the available tables and variables visit https://www.ine.es/dyngs/DataLab/en/manual.html?cid=1259945952385.
+Description: Retrieves data from the 2021 Spanish census through the National Institute of Statistics official API. For more info on the available tables and variables visit https://www.ine.es/dyngs/DataLab/en/manual.html?cid=1259945952385.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
