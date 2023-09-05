@@ -19,6 +19,6 @@ A data frame with 395 rows and 4 columns:
 variables
 }
 \description{
-A list of the available variables in the spanish 2021 Census API
+A list of the available variables in the Spanish 2021 Census API
 }
 \keyword{datasets}
