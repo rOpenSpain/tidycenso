@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+# tidycenso
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/hmeleiro/tidycenso/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hmeleiro/tidycenso/actions/workflows/R-CMD-check.yaml) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+<!-- badges: end -->
+
+## Overview
+
+`tidycenso` is an R library for accessing the 2021 Spanish census API.
+
+## Installation
+
+```{r, eval=FALSE}
+devtools::install_github("hmeleiro/tidycenso")
+```
+
+
+## Usage
+
+`tidycenso` only has one function: `get_censo`. It admits 4 parameters:
+
+1.  `table`: A string of length 1 with the table name to query data from
+2.  `variables`: A string with variable names of the queried table. If more than one, must be provided using c() (max. 4)
+3.  `metrics`: A string with the units of measurement of the queried data. If more than one, must be provided concatenated using 'c()'
+4.  `language`: The language used in the request body (the only valid values are 'EN' or 'ES')
+
+The ids and descriptions of the available tables, variables and units of measurement (metrics) are accessible through internal data objects named `tables`, `variables`, and `metrics`.
+
+## Example
+```{r include=FALSE}
+library(tidycenso)
+```
+
+
+```{r echo=TRUE}
+df <- get_censo("hog", c("ID_SUP_VIV", "ID_RESIDENCIA_N1"), "SHOGARES")
+head(df)
+
+tidycenso::tables
+```
