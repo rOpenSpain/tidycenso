@@ -12,3 +12,15 @@ RoxygenNote: 7.2.3
 Imports: httr, jsonlite
 Depends: 
     R (>= 2.10)
+Suggests: 
+    knitr,
+    rmarkdown,
+    dplyr,
+    ggplot2,
+    sf,
+    mapSpain,
+    ggraph,
+    tidygraph,
+    scales
+VignetteBuilder: knitr
+URL: https://hmeleiro.github.io/tidycenso/

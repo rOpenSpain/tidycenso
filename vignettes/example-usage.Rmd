@@ -1,0 +1,123 @@
+---
+title: "Use case: migration flows"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+In this use case we show how to use [`tidycensus`](https://github.com/hmeleiro/tidycenso) to visualize the most important internal migration flows over the last 10 years.
+
+First download the number of people by province of residence in 2011 and 2020.
+
+```{r}
+library(tidycenso)
+library(dplyr)
+
+df <- get_censo("per.ppal", c("ID_RESI_2011_N2", "ID_RESI_2020_N2"), "SPERSONAS")
+
+head(df)
+```
+
+We then do some data wrangling estimate the net flows, and select the largest ones.
+
+```{r}
+
+df <- 
+  df %>% 
+  filter(
+    ID_RESI_2011_N2 != "No consta",
+    ID_RESI_2020_N2 != "No consta",
+  ) %>% 
+  mutate(across(c(ID_RESI_2020_N2, ID_RESI_2011_N2), ~substr(., 1, 2))) 
+
+entries <- 
+  df %>% 
+  rename(to = ID_RESI_2020_N2, from = ID_RESI_2011_N2)
+
+exits <- 
+  df %>% 
+  rename(from = ID_RESI_2020_N2, to = ID_RESI_2011_N2) %>% 
+  mutate(SPERSONAS = -SPERSONAS)
+
+
+net_flows <- 
+  rbind(entries, exits) %>% 
+  group_by(from, to) %>% 
+  summarise(SPERSONAS = sum(SPERSONAS)) %>% 
+  filter(
+    SPERSONAS > 0,
+    !from %in% c("Ex", "No"),
+    !to %in% c("Ex", "No")
+  ) %>% 
+  ungroup() %>% 
+  slice_max(SPERSONAS, prop = .10)
+
+```
+
+With the estimated net migration flows, we can now visualize them We'll use [`tidygraph`](https://tidygraph.data-imaginist.com/) and [`ggraph`](https://ggraph.data-imaginist.com/index.html) to create the graph, [`ggplot2`](https://ggplot2.tidyverse.org/) to visualize it and [`mapSpain`](https://ropenspain.github.io/mapSpain/index.html) to download the geometries of the provinces.
+
+```{r}
+
+library(tidygraph)
+library(ggraph)
+library(mapSpain)
+library(ggplot2)
+library(sf)
+
+sf_provs <- esp_get_prov() %>%
+  select(cpro, ine.prov.name)
+
+nodes <- 
+  sf_provs %>% 
+  st_centroid() %>% 
+  st_coordinates() %>% 
+  as.data.frame() %>% 
+  mutate(id = sf_provs$cpro)
+
+graph <- tbl_graph(nodes, edges = net_flows, node_key = "id", directed = T)
+
+coord_layout <- 
+  create_layout(
+    graph = graph,
+    layout = "manual", 
+    x = nodes$X,
+    y = nodes$Y
+  )
+
+
+```
+
+
+Once we have created the graph and the layout for it, we can use [`ggplot2`](https://ggplot2.tidyverse.org/) to visualise it.
+```{r}
+
+p <- 
+  ggraph(coord_layout) +
+  geom_sf(data = sf_provs, color = "black",  fill = "grey90") +
+  geom_edge_arc(
+    aes(
+      width=SPERSONAS,
+      alpha = after_stat(index),
+      color = after_stat(index)
+    ),
+    lineend = "round", n = 200,
+    strength = .1) +
+  scale_edge_width_continuous(range=c(0.1, 1.5)) +
+  scale_edge_color_gradientn(colors = scales::brewer_pal("seq", direction = 1)(5)[3:5]) + 
+  scale_edge_alpha(range = c(.05, 1)) +
+  theme_void() +
+  theme(legend.position = "none")
+
+p
+
+```
+
