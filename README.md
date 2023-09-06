@@ -44,9 +44,9 @@ head(df)
 #> 1    25464               Andalucía Hasta 30 m2
 #> 2     2586                  Aragón Hasta 30 m2
 #> 3     3255 Asturias, Principado de Hasta 30 m2
-#> 4     7683          Balears, Illes Hasta 30 m2
+#> 4     7686          Balears, Illes Hasta 30 m2
 #> 5    11766                Canarias Hasta 30 m2
-#> 6     1008               Cantabria Hasta 30 m2
+#> 6     1005               Cantabria Hasta 30 m2
 
 tidycenso::tables
 #>   id_tabla                                 descripcion_tabla_es
