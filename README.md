@@ -16,7 +16,7 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 ## Installation
 
 ``` r
-devtools::install_github("hmeleiro/tidycenso")
+devtools::install_github("ropenspain/tidycenso")
 ```
 
 ## Usage
@@ -45,8 +45,8 @@ head(df)
 #> 2     2586                  Aragón Hasta 30 m2
 #> 3     3255 Asturias, Principado de Hasta 30 m2
 #> 4     7683          Balears, Illes Hasta 30 m2
-#> 5    11763                Canarias Hasta 30 m2
-#> 6     1005               Cantabria Hasta 30 m2
+#> 5    11766                Canarias Hasta 30 m2
+#> 6     1008               Cantabria Hasta 30 m2
 
 tidycenso::tables
 #>   id_tabla                                 descripcion_tabla_es

@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 ## Installation
 
 ```{r, eval=FALSE}
-devtools::install_github("hmeleiro/tidycenso")
+devtools::install_github("ropenspain/tidycenso")
 ```
 
 
