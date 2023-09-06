@@ -19,7 +19,7 @@ get_censo(table, variables, metrics, language = "ES")
 A data.frame with the queried data
 }
 \description{
-\code{get_censo} retrieves data from the 2021 Spanish census through the API of the National Institute of Statistics. For more info on the available tables and variables visit https://www.ine.es/dyngs/DataLab/en/manual.html?cid=1259945952385.
+\code{get_censo} retrieves data from the 2021 Spanish census through the API of the National Institute of Statistics. For more info on the available tables and variables visit \url{https://www.ine.es/dyngs/DataLab/en/manual.html?cid=1259945952385}.
 }
 \examples{
 df <- get_censo("hog", c("ID_SUP_VIV", "ID_RESIDENCIA_N1"), "SHOGARES")
