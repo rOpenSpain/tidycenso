@@ -1,4 +1,32 @@
-url: https://hmeleiro.github.io/tidycenso/
+url: https://ropenspain.github.io/tidycenso/
 template:
-  bootstrap: 5
+  package: rostemplate
+lang: en
+navbar:
+  structure:
+    left:  [intro, reference, articles]
+    right: [github, twitter, search]
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/rOpenSpain/tidycenso
+      aria-label: Github
+    twitter:
+      icon: fa-twitter
+      href: http://twitter.com/hmeleiros
+      aria-label: Twitter
+repo:
+  url:
+    home: https://github.com/rOpenSpain/tidycenso
+    issue: https://github.com/rOpenSpain/tidycenso/issues/
+    user: https://github.com/hmeleiro/
 
+home:
+  links:
+    - text: Report a bug
+      href: https://github.com/rOpenSpain/infoelectoral/issues
+  sidebar:
+    structure: [links, license, authors, citation, dev]
+authors:
+  Héctor Meleiro:
+    href: 'https://hmeleiro.com/'

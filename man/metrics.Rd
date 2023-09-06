@@ -7,13 +7,13 @@
 \format{
 A data frame with 51 rows and 4 columns:
 \describe{
-  \item{id_tabla}{Table ID}
-  \item{id_unidad_de_medida}{unit ID}
-  \item{descripcion_unidad_de_medida_es, descripcion_unidad_de_medida_en}{Content description of the unit of measurement in spanish and english}
+\item{id_tabla}{Table ID}
+\item{id_unidad_de_medida}{unit ID}
+\item{descripcion_unidad_de_medida_es, descripcion_unidad_de_medida_en}{Content description of the unit of measurement in spanish and english}
 }
 }
 \source{
-<https://www.ine.es/censos2021/SDC21_variables_disponibles.xlsx>
+\url{https://www.ine.es/censos2021/SDC21_variables_disponibles.xlsx}
 }
 \usage{
 metrics

@@ -23,4 +23,6 @@ Suggests:
     tidygraph,
     scales
 VignetteBuilder: knitr
-URL: https://hmeleiro.github.io/tidycenso/
+URL: https://ropenspain.github.io/tidycenso/, https://github.com/ropenspain/tidycenso
+BugReports: https://github.com/ropenspain/tidycenso/issues
+Roxygen: list(markdown = TRUE)

@@ -2,7 +2,7 @@
 title: "Use case: migration flows"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Example}
+  %\VignetteIndexEntry{Use case: migration flows}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-In this use case we show how to use [`tidycensus`](https://github.com/hmeleiro/tidycenso) to visualize the most important internal migration flows over the last 10 years.
+In this use case we show how to use [`tidycenso`](https://github.com/rOpenSpain/tidycenso) to visualize the most important internal migration flows over the last 10 years.
 
 First download the number of people by province of residence in 2011 and 2020.
 
