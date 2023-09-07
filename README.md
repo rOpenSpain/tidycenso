@@ -3,10 +3,10 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/hmeleiro/tidycenso/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hmeleiro/tidycenso/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/rOpenSpain/tidycenso/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rOpenSpain/tidycenso/actions/workflows/R-CMD-check.yaml)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
+[![rOS-badge](https://ropenspain.github.io/rostemplate/reference/figures/ropenspain-badge.svg)](https://ropenspain.es/)
 <!-- badges: end -->
 
 ## Overview
@@ -44,9 +44,9 @@ head(df)
 #> 1    25464               Andalucía Hasta 30 m2
 #> 2     2586                  Aragón Hasta 30 m2
 #> 3     3255 Asturias, Principado de Hasta 30 m2
-#> 4     7683          Balears, Illes Hasta 30 m2
+#> 4     7686          Balears, Illes Hasta 30 m2
 #> 5    11766                Canarias Hasta 30 m2
-#> 6     1008               Cantabria Hasta 30 m2
+#> 6     1005               Cantabria Hasta 30 m2
 
 tidycenso::tables
 #>   id_tabla                                 descripcion_tabla_es

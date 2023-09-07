@@ -7,12 +7,12 @@
 \format{
 A data frame with 7 rows and 3 columns:
 \describe{
-  \item{id_tabla}{Table ID}
-  \item{descripcion_tabla_es, descripcion_tabla_en}{Content description of the table in spanish and english}
+\item{id_tabla}{Table ID}
+\item{descripcion_tabla_es, descripcion_tabla_en}{Content description of the table in spanish and english}
 }
 }
 \source{
-<https://www.ine.es/censos2021/SDC21_tablas_disponibles.xlsx>
+\url{https://www.ine.es/censos2021/SDC21_tablas_disponibles.xlsx}
 }
 \usage{
 tables

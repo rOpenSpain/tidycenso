@@ -7,13 +7,13 @@
 \format{
 A data frame with 395 rows and 4 columns:
 \describe{
-  \item{id_tabla}{Table ID}
-  \item{id_variable}{Variable ID}
-  \item{descripcion_variable_es, descripcion_variable_en}{Content description of the variable in spanish and english}
+\item{id_tabla}{Table ID}
+\item{id_variable}{Variable ID}
+\item{descripcion_variable_es, descripcion_variable_en}{Content description of the variable in spanish and english}
 }
 }
 \source{
-<https://www.ine.es/censos2021/SDC21_variables_disponibles.xlsx>
+\url{https://www.ine.es/censos2021/SDC21_variables_disponibles.xlsx}
 }
 \usage{
 variables
