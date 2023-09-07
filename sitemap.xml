@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/404.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/404.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/LICENSE.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/articles/example-usage.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/articles/example-usage.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/articles/index.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/authors.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/authors.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/index.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/index.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/reference/get_censo.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/reference/get_censo.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/reference/index.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/reference/metrics.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/reference/metrics.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/reference/tables.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/reference/tables.html</loc>
   </url>
   <url>
-    <loc>https://hmeleiro.github.io/tidycenso/reference/variables.html</loc>
+    <loc>https://ropenspain.github.io/tidycenso/reference/tidycenso-package.html</loc>
+  </url>
+  <url>
+    <loc>https://ropenspain.github.io/tidycenso/reference/variables.html</loc>
   </url>
 </urlset>
